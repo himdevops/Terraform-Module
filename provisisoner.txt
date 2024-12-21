@@ -1,0 +1,68 @@
+# Terraform Provisioners
+
+Provisioners in Terraform are used to **model specific actions** on the **local machine** or on a **remote machine** to prepare servers.
+
+## Use Cases
+- **Passing data** into virtual machines and other compute resources.
+- Running **configuration management software** such as Packer, Chef, or Ansible.
+
+## Types of Provisioners
+1. **Creation-Time Provisioners**  
+   These are executed during the creation phase of the resource.
+   
+2. **Destroy-Time Provisioners**  
+   These are executed during the destruction phase of the resource.
+
+## Provisioner Behavior
+- **Failure Behaviour: Continue**  
+  - Ignores the error and continues with resource creation or destruction.
+
+- **Failure Behaviour: Fail** (Default Behavior)  
+  - Raises an error and stops applying changes.  
+  - If a creation-time provisioner fails, the resource is **tainted**.
+
+## Key Points
+- **Provisioners are a Last Resort**  
+  Avoid using provisioners whenever possible, as they can complicate resource management.
+  
+- **First-Class Terraform Provider Functionality**  
+  Prefer using Terraform's built-in providers and modules for resource management.
+
+---
+
+*Prepared using content from StackSimplify.*
+
+
+# Terraform Provisioners
+
+Provisioners in Terraform are used to **model specific actions** on the **local machine** or on a **remote machine** to prepare servers.
+
+## Use Cases
+- **Passing data** into virtual machines and other compute resources.
+- Running **configuration management software** such as Packer, Chef, or Ansible.
+
+## Types of Provisioners
+1. **Creation-Time Provisioners**  
+   These are executed during the creation phase of the resource.
+   
+2. **Destroy-Time Provisioners**  
+   These are executed during the destruction phase of the resource.
+
+## Provisioner Behavior
+- **Failure Behaviour: Continue**  
+  - Ignores the error and continues with resource creation or destruction.
+
+- **Failure Behaviour: Fail** (Default Behavior)  
+  - Raises an error and stops applying changes.  
+  - If a creation-time provisioner fails, the resource is **tainted**.
+
+## Key Points
+- **Provisioners are a Last Resort**  
+  Avoid using provisioners whenever possible, as they can complicate resource management.
+  
+- **First-Class Terraform Provider Functionality**  
+  Prefer using Terraform's built-in providers and modules for resource management.
+
+---
+
+*Prepared using content from StackSimplify.*
